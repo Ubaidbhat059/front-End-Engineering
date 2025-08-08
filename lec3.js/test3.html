@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Example</title>
+</head>
+<body>
+<h1>Welcome Ubaid</h1>
+
+<script>
+    // Function Declaration
+    function add1(a, b) {
+        console.log("add1 (function declaration):", a + b);
+        return a + b + 1;
+    }
+    add1(2, 4);
+
+    // Function Expression
+    let add2 = function(a, b) {
+        console.log("add2 (function expression):", a + b);
+        return a + b + 1;
+    };
+    add2(3, 5);
+
+    // Arrow Function
+    let add3 = (a, b) => {
+        console.log("add3 (arrow function):", a + b);
+        return a + b + 1;
+    };
+    let ans = add3(3, 4);
+    console.log("Returned value:", ans);
+    console.log("Type of add3:", typeof(add3));
+    console.log("Function code:", add3);
+</script>
+
+</body>
+</html>

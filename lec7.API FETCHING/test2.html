@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBU Welcome</title>
+</head>
+
+<body>
+    <h1>Welcome to RBU</h1>
+    <p>Welcome</p>
+
+    <script>
+
+        let ubaid = {
+            name: "Ubaid Bhat",
+            age: 20,
+            roll: 25
+        };
+
+        document.getElementsByTagName("h1")[0].innerHTML = `
+            <p>vikas patel</p>
+            <h2>Ubaid's Age: ${ubaid.age}, Roll No: ${ubaid.roll}</h2>
+            <ul>
+                <li>Tea</li>
+                <li>Sugar</li>
+                <li>Rice</li>
+                <li>Name: ${ubaid.name}</li>
+            </ul>
+        `;
+    </script>
+</body>
+
+</html>

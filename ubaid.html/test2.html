@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ubaid Bhatt | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --accent: #00bcd4;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #ffffff;
+      --accent: #03dac6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      transition: 0.4s;
+    }
+
+    header {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .toggle-theme {
+      background: none;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .about, .skills, .projects, .contact {
+      text-align: center;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .skills li {
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .projects .project-card {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 15px auto;
+      max-width: 600px;
+      text-align: left;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    [data-theme="dark"] .projects .project-card {
+      background: #1e1e1e;
+    }
+
+    .resume-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: var(--accent);
+      color: white;
+      padding: 10px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .skills ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <header>
+    <h1>Ubaid Bhatt</h1>
+    <p>Frontend Developer | BCA Student | UI Enthusiast</p>
+    <button class="toggle-theme" onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a class="resume-btn" href="resume.pdf" download>📄 Download Resume</a>
+  </nav>
+
+  <section id="about" class="about">
+    <img src="ubaid.jpg" alt="Ubaid">
+
+    <h2>About Me</h2>
+    <p>Hi, I'm Ubaid Bhatt from Jammu & Kashmir. I'm currently pursuing BCA at Rayat Bahra University. I love building creative websites using HTML, CSS, and JavaScript. My goal is to become a full-stack web developer.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Bootstrap</li>
+      <li>Responsive Web Design</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Netflix Clone</h3>
+      <p>A basic frontend clone of Netflix using HTML, CSS, and responsive design.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>3D Car Image Slider</h3>
+      <p>A rotating image slider showcasing cars in 3D style, built using only HTML + CSS.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>This very portfolio you're viewing — clean, minimal, and mobile friendly!</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Ubaid Bhatt | Designed with ❤️
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      body.dataset.theme = body.dataset.theme === "dark" ? "light" : "dark";
+    }
+  </script>
+
+</body>
+</html>

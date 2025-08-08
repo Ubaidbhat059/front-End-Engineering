@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Car Image Slider</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1200px;
+    }
+
+    .slider {
+      width: 350px;
+      height: 220px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 18s infinite linear;
+    }
+
+    .slide {
+      position: absolute;
+      width: 350px;
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+      backface-visibility: hidden;
+    }
+
+    /* 🔁 Car Images (Free online sample car images, you can change) */
+    .slide:nth-child(1) {
+      transform: rotateY(0deg) translateZ(450px);
+      background-image: url('https://cdn.pixabay.com/photo/2017/01/06/19/15/car-1957037_1280.jpg');
+    }
+
+    .slide:nth-child(2) {
+      transform: rotateY(60deg) translateZ(450px);
+      background-image: url('https://cdn.pixabay.com/photo/2020/06/29/14/10/car-5353685_1280.jpg');
+    }
+
+    .slide:nth-child(3) {
+      transform: rotateY(120deg) translateZ(450px);
+      background-image: url('https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg');
+    }
+
+    .slide:nth-child(4) {
+      transform: rotateY(180deg) translateZ(450px);
+      background-image: url('https://cdn.pixabay.com/photo/2016/11/29/03/53/audi-1867431_1280.jpg');
+    }
+
+    .slide:nth-child(5) {
+      transform: rotateY(240deg) translateZ(450px);
+      background-image: url('https://cdn.pixabay.com/photo/2017/01/06/19/15/car-1957036_1280.jpg');
+    }
+
+    .slide:nth-child(6) {
+      transform: rotateY(300deg) translateZ(450px);
+      background-image: url('https://cdn.pixabay.com/photo/2018/03/04/22/38/car-3194842_1280.jpg');
+    }
+
+    @keyframes rotate {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(-360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Image Slider</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1200px;
+    }
+
+    .slider {
+      width: 320px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 20s infinite linear;
+    }
+
+    .slide {
+      position: absolute;
+      width: 320px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      backface-visibility: hidden;
+    }
+
+    /* 🔁 Add your own images below */
+    .slide:nth-child(1) {
+      transform: rotateY(0deg) translateZ(400px);
+      background-image: url('https://picsum.photos/id/1015/600/400');
+    }
+    .slide:nth-child(2) {
+      transform: rotateY(60deg) translateZ(400px);
+      background-image: url('https://picsum.photos/id/1016/600/400');
+    }
+    .slide:nth-child(3) {
+      transform: rotateY(120deg) translateZ(400px);
+      background-image: url('https://picsum.photos/id/1018/600/400');
+    }
+    .slide:nth-child(4) {
+      transform: rotateY(180deg) translateZ(400px);
+      background-image: url('https://picsum.photos/id/1020/600/400');
+    }
+    .slide:nth-child(5) {
+      transform: rotateY(240deg) translateZ(400px);
+      background-image: url('https://picsum.photos/id/1024/600/400');
+    }
+    .slide:nth-child(6) {
+      transform: rotateY(300deg) translateZ(400px);
+      background-image: url('https://picsum.photos/id/1031/600/400');
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(-360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+
+</body>
+</html>
